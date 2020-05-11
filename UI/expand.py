@@ -98,18 +98,23 @@ class Ui_expand(object):
         self.actionAbout.setText(_translate("expand", "About"))
 
 
-# class EyeTest_window():
-#     def __init__(self):
-#         QMainWindow.__init__(self)
-#         self.eye_ui = Ui_eyeTest()
-#         self.eye_ui.setupUi(self)
+class EyeTest_window():
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.eye_ui = Ui_eyeTest()
+        self.eye_ui.setupUi(self)
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     exp_window = QtWidgets.QMainWindow()
-    ui = Ui_expand()
-    ui.setupUi(exp_window)
+    exp_ui = Ui_expand()
+    exp_ui.setupUi(exp_window)
+
+    # eyetest_window = EyeTest_window()
+    # btn_eye = exp_ui.ele_eye
+    # btn_eye.clicked.connect(eyetest_window.show)
+
     exp_window.show()
     sys.exit(app.exec_())
